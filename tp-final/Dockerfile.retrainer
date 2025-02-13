@@ -1,0 +1,16 @@
+# Utilisation d'une image Python officielle
+FROM python:3.9
+
+# Définition du répertoire de travail
+WORKDIR /app
+
+# Installer MySQL client pour interagir avec la base de données
+RUN apt-get update && apt-get install -y default-mysql-client
+
+# Copier les fichiers nécessaire
+COPY requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+COPY model.py retrain.py db.py /app/
+
+# Commande pour exécuter le réentraînement
+CMD ["python", "retrain.py"]
