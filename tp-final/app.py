@@ -17,12 +17,12 @@ except Exception as e:
 
 def store_tweet_in_db(tweet, score):
     """Stocke le tweet analysé dans MySQL avec les labels générés."""
-    if score > 0.1:
+    if score > 0:
         positive, negative = 1, 0
-    elif score < -0.1:
-        positive, negative = 0, 1
     else:
-        positive, negative = 0, 0
+        positive, negative = 0, 1
+    # else:
+    #     positive, negative = 0, 0
 
     try:
         conn = get_db_connection()
