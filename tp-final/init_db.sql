@@ -34,15 +34,16 @@ INSERT INTO tweets (text, positive, negative) VALUES
 ('Cet hôtel est une horreur, jamais vu ça.', 0, 1),
 ('Les plats étaient froids et immangeables.', 0, 1),
 ('Aucune assistance, une vraie arnaque.', 0, 1),
+('Nul, vraiment pas bien.', 0, 1),
 
--- 🔹 Tweets neutres
-('Moyen, sans plus.', 0, 0),
-('Je suis mitigé sur ce restaurant.', 0, 0),
-('Bof, sans intérêt.', 0, 0),
-('Rien d\'exceptionnel, juste correct.', 0, 0),
-('L\'expérience était neutre, pas grand-chose à dire.', 0, 0),
-('Produit standard, ni bon ni mauvais.', 0, 0),
-('Service correct, mais sans plus.', 0, 0),
-('Un hôtel moyen, rien de spécial.', 0, 0),
-('Livraison dans les délais, sans problème particulier.', 0, 0),
-('Film passable, pas inoubliable.', 0, 0);
+-- -- 🔹 Tweets neutres
+-- ('Moyen, sans plus.', 0, 0),
+-- ('Je suis mitigé sur ce restaurant.', 0, 0),
+-- ('Bof, sans intérêt.', 0, 0),
+-- ('Rien d\'exceptionnel, juste correct.', 0, 0),
+-- ('L\'expérience était neutre, pas grand-chose à dire.', 0, 0),
+-- ('Produit standard, ni bon ni mauvais.', 0, 0),
+-- ('Service correct, mais sans plus.', 0, 0),
+-- ('Un hôtel moyen, rien de spécial.', 0, 0),
+-- ('Livraison dans les délais, sans problème particulier.', 0, 0),
+-- ('Film passable, pas inoubliable.', 0, 0);
