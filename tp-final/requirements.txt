@@ -6,3 +6,4 @@ joblib
 mysql-connector-python
 schedule
 python-dotenv
+SQLAlchemy

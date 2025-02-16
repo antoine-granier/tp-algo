@@ -21,25 +21,22 @@ def get_db_connection():
             return conn
         except mysql.connector.Error as err:
             print(f"⚠️ Erreur de connexion MySQL : {err}")
-            print("🔄 Nouvelle tentative dans 5 secondes...")
-            time.sleep(5)
+            print("🔄 Nouvelle tentative dans 2 secondes...")
+            time.sleep(2)
 
 def create_table():
     """Crée la table `tweets` si elle n'existe pas."""
     conn = get_db_connection()
-    cursor = conn.cursor()
-    
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS tweets (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            text TEXT NOT NULL,
-            positive INT NOT NULL,
-            negative INT NOT NULL
-        )
-    """)
-    
-    conn.commit()
-    cursor.close()
+    with conn.cursor() as cursor:
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS tweets (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                text TEXT NOT NULL,
+                positive INT NOT NULL,
+                negative INT NOT NULL
+            )
+        """)
+        conn.commit()
     conn.close()
     print("✅ Table `tweets` vérifiée/créée.")
 
